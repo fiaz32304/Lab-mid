@@ -1,0 +1,180 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101827;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #38bdf8;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 15px;
+  width: 280px;
+}
+
+button, select {
+  padding: 12px 18px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+button {
+  background: #38bdf8;
+  color: #07121f;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #7dd3fc;
+}
+
+select {
+  background: #334155;
+  color: white;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.stats span {
+  background: #1e293b;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+#playArea {
+  position: relative;
+  height: 350px;
+  background: #1e293b;
+  border: 2px solid #334155;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #38bdf8;
+  color: #07121f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  font-weight: bold;
+  box-shadow: 0 0 15px #38bdf866;
+}
+
+#target {
+  font-size: 85px;
+  font-weight: bold;
+  color: #38bdf8;
+  margin: 35px auto 15px;
+}
+
+#keyboard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+}
+
+.key {
+  padding: 12px;
+  min-width: 42px;
+  background: #334155;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.active {
+  background: #38bdf8;
+  color: #07121f;
+}
+
+#feedback {
+  min-height: 25px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.good {
+  color: #4ade80;
+}
+
+.bad {
+  color: #fb7185;
+}
+
+.controls {
+  margin-top: 15px;
+}
+
+#result {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  #playArea {
+    height: 300px;
+  }
+
+  .bubble {
+    width: 42px;
+    height: 42px;
+  }
+
+  .key {
+    min-width: 32px;
+    padding: 9px;
+  }
+}

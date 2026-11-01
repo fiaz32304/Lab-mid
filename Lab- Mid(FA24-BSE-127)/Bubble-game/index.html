@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Typing Challenge Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Typing Challenge Game</h1>
+    <p>Improve your typing skills!</p>
+
+    <!-- Home Screen -->
+    <div id="home">
+      <h2>Select Game Mode</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Bubble Rush</h3>
+          <p>Type letters before bubbles reach the top.</p>
+          <button onclick="chooseGame('bubble')">Start Bubbles</button>
+        </div>
+
+        <div class="card">
+          <h3>KeyMagnet</h3>
+          <p>Press the correct target key quickly.</p>
+          <button onclick="chooseGame('key')">Start KeyMagnet</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game" class="hidden">
+
+      <h2 id="gameTitle"></h2>
+
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty" onchange="changeDifficulty()">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <div class="stats">
+        <span>Score: <b id="score">0</b></span>
+        <span>Time: <b id="time">60</b>s</span>
+        <span>Correct: <b id="correct">0</b></span>
+        <span>Wrong: <b id="wrong">0</b></span>
+        <span>Misses: <b id="misses">0</b></span>
+      </div>
+
+      <div id="playArea">
+        <div id="target" class="hidden">A</div>
+        <div id="keyboard" class="hidden"></div>
+      </div>
+
+      <p id="feedback">Press Start to play!</p>
+
+      <div class="controls">
+        <button onclick="startGame()">Start</button>
+        <button onclick="restartGame()">Restart</button>
+        <button onclick="resetGame()">Reset</button>
+      </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result" class="hidden">
+      <h2>Game Finished!</h2>
+      <h3 id="resultTitle"></h3>
+      <p id="resultText"></p>
+      <button onclick="restartGame()">Play Again</button>
+      <button onclick="resetGame()">Home</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
